@@ -4,6 +4,7 @@ module SpreeBanner
       
       def add_javascripts
         append_file "app/assets/javascripts/admin/all.js", "//= require admin/spree_banner\n"
+        append_file "app/assets/javascripts/store/all.js", "//= require store/jquery.slides\n"
       end
       
       def add_stylesheets

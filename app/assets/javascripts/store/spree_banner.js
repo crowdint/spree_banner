@@ -1,1 +1,1 @@
-
+//= require store/jquery.slides

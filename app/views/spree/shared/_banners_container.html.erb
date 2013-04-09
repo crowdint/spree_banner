@@ -1,0 +1,25 @@
+<div id="banners_container">
+  <% banner.each do |ban| %>
+    <div class="banner">
+      <a href="<%= ban.url.blank? ? "javascript: void(0)" : ban.url %>">
+        <img alt="<%= ban.presentation %>" src="<%= ban.attachment.url %>">
+      </a>
+    </div>
+  <% end %>
+</div>
+
+<script>
+    $(function() {
+      $('#banners_container').slidesjs({
+        width: <%= (options[:width].nil?) ? '940' : options[:width] %>,
+        height: <%= (options[:height].nil?) ? '120' : options[:height] %>,
+        play: {
+          active: false,
+          auto: true,
+          interval: <%= (options[:interval].nil?) ? '10000' : options[:interval] %>,
+          swap: true,
+          navigation: false
+        }
+      });
+    });
+</script>
