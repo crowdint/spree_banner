@@ -9,8 +9,8 @@
 </div>
 
 <script>
-  $(document).ready(function() {
-      $('#banners_container').slidesjs({
+  jQuery(document).ready(function() {
+    jQuery('#banners_container').slidesjs({
         width: <%= (options[:width].nil?) ? '940' : options[:width] %>,
         height: <%= (options[:height].nil?) ? '120' : options[:height] %>,
         play: {
