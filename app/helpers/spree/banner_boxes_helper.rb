@@ -4,7 +4,7 @@ module Spree
     def banner_box(params={})
       params[:category] ||= "home"
       params[:class] ||= "banner"
-      params[:style] ||= "small"
+      params[:style] ||= "full"
       params[:list] ||= false
       params[:options] ||= {}
       @@banner = Spree::BannerBox.enable(params[:category])
