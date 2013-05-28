@@ -2,7 +2,7 @@
   <% banner.each do |ban| %>
     <div class="banner">
       <a href="<%= ban.url.blank? ? "javascript: void(0)" : ban.url %>">
-        <img alt="<%= ban.presentation %>" src="<%= ban.attachment.url %>">
+        <img alt="<%= ban.presentation %>" src="<%= ban.attachment.url(style) %>">
       </a>
     </div>
   <% end %>

@@ -16,7 +16,7 @@ module Spree
         
       if (params[:list])
         #content_tag(:ul, banner.map{|ban| content_tag(:li, link_to(image_tag(ban.attachment.url(params[:style].to_sym)), (ban.url.blank? ? "javascript: void(0)" : ban.url)), :class => params[:class])}.join().html_safe )
-        render(:partial =>'spree/shared/banners_container', :layout => nil , :locals => { :banner => @@banner, :options => params[:options]}).to_s
+        render(:partial =>'spree/shared/banners_container', :layout => nil , :locals => { :banner => @@banner, :options => params[:options], :style=>params[:style].to_sym}).to_s
       else
         #banner.map{|ban| content_tag(:div, link_to(image_tag(ban.attachment.url(params[:style].to_sym)), (ban.url.blank? ? "javascript: void(0)" : ban.url)), :class => params[:class])}.join().html_safe
         ban = @@banner.offset(rand(@@banner.count)).first
